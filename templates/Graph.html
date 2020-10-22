@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		title:{
+			text: "Cases till Today"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "Utah",  y: 3023  },
+				{ label: "Nebraska", y: 3049  },
+				{ label: "New York City", y: 3050  },
+				{ label: "Idaho",  y: 3066  },
+                { label: "Wisconsin",  y: 3150 },
+                { label: "Arizona",  y: 3234 },
+                { label: "South Carolina",  y: 3238 },
+                { label: "Georgia",  y: 3245 },
+                { label: "Arkansas",  y: 3305 },
+                { label: "Iowa",  y: 3414 },
+                { label: "Tennessee",  y: 3428 },
+                { label: "Florida",  y: 3508 },
+                { label: "Alabama",  y: 3549 },
+                { label: "Mississippi",  y: 3728 },
+                { label: "South Dakota",  y: 3835 },
+                { label: "Louisiana",  y: 3843 },
+                { label: "North Dakota",  y: 4429 },
+
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+</body>
+</html>
