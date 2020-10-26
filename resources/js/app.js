@@ -1,6 +1,4 @@
 
-
-// SELECT ALL ELEMENTS
 const country_name_element = document.querySelector(".country .name");
 const total_cases_element = document.querySelector(".total-cases .value");
 const new_cases_element = document.querySelector(".total-cases .new-value");
@@ -11,7 +9,7 @@ const new_deaths_element = document.querySelector(".deaths .new-value");
 
 const ctx = document.getElementById("axes_line_chart").getContext("2d");
 
-// APP VARIABLES
+
 let app_data = [],
   cases_list = [],
   recovered_list = [],
