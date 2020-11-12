@@ -17,14 +17,11 @@ if(!isset($_SESSION['username']))
  ?>
 
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Quarantine & Fun</title>
+    <title>Members</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
@@ -34,7 +31,6 @@ if(!isset($_SESSION['username']))
 
 
 
-    <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -291,6 +287,7 @@ a{
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">To Do</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <a class="dropdown-item" href="games.php">Games</a>
+          <a class="dropdown-item" href="article.php">Articles</a>
           <a class="dropdown-item" href="vc.php">Video calls</a>
           <a class="dropdown-item" href="exercise.php">Exercise</a>
           <a class="dropdown-item" href="courses.php">Courses</a>
@@ -361,7 +358,7 @@ a{
             <th>Branch</th>
             <th>Instagram</th>
             <th>Linkedin</th>
-            <th colspan="2">Operations</th>
+            <th>Delete</th>
           </thead>
           <tbody>
 
@@ -390,7 +387,6 @@ a{
               <td><?php echo $result['branch']; ?></td>
               <td><?php echo $result['insta']; ?></td>
               <td><?php echo $result['linkedin']; ?></td>
-              <td><a href="updateinfo.php?id=<?php echo $result['id']; ?>"><i class="fa fa-edit"></i></a></td>
               <td><a href="../delete.php?id=<?php echo $result['id']; ?>"><i class="fa fa-trash" aria-hidden="true">
              
             </tr>

@@ -15,14 +15,12 @@ if(!isset($_SESSION['username']))
       }
 
  ?>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Quarantine & Fun</title>
+    <title>About Us</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
@@ -30,9 +28,8 @@ if(!isset($_SESSION['username']))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
 
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -49,7 +46,6 @@ if(!isset($_SESSION['username']))
         }
       }
     </style>
-    <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
   </head>
   <body>
@@ -72,6 +68,7 @@ if(!isset($_SESSION['username']))
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">To Do</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <a class="dropdown-item" href="games.php">Games</a>
+          <a class="dropdown-item" href="article.php">Articles</a>
           <a class="dropdown-item" href="vc.php">Video calls</a>
           <a class="dropdown-item" href="exercise.php">Exercise</a>
           <a class="dropdown-item" href="courses.php">Courses</a>
@@ -142,10 +139,10 @@ if(!isset($_SESSION['username']))
                                <li class="list-inline-item"><a href="https://instagram.com/rd.__ae?igshid=1p8hv0hiv7xc4" class="social-link" target="blank"><i class="fa fa-instagram"></i></a></li>
                               
                            </ul>
+                           <p>API, DB</p>
                        </div>
-                   </div><!-- End -->
+                   </div>
 
-                    <!-- Team item -->
                     <div class="col-xl-3 col-sm-6 mb-5">
                         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="images/amit.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                             <h5 class="mb-0">Amit</br> Kumar</h5>
@@ -155,6 +152,7 @@ if(!isset($_SESSION['username']))
                                 <li class="list-inline-item"><a href="https://www.instagram.com/_mr.ambivert_/" class="social-link" target="blank"><i class="fa fa-instagram"></i></a></li>
                                 
                             </ul>
+                            <p>Games</p>
                         </div>
                     </div><!-- End -->
 
@@ -168,6 +166,7 @@ if(!isset($_SESSION['username']))
                                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
                               
                             </ul>
+                            <p>UI</p>
                         </div>
                     </div><!-- End -->
 
@@ -181,6 +180,7 @@ if(!isset($_SESSION['username']))
                                 <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
                                 
                             </ul>
+                            <p>Graphs</p>
                         </div>
                     </div>
                 </div><section><center><h4>We Started this platform in order to create a community we all are missing in this lockdown. Everything according to us is made available to you. Hope you have a great time here.<br> Keep exploring  keep learning :) </h4></center></section>

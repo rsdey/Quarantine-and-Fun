@@ -15,14 +15,11 @@ if(!isset($_SESSION['username']))
       }
 
  ?>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Quarantine & Fun</title>
+    <title>Recordings</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
@@ -30,7 +27,7 @@ if(!isset($_SESSION['username']))
 
 
 
-    <!-- Bootstrap core CSS -->
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -49,7 +46,7 @@ if(!isset($_SESSION['username']))
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+
     <link href="css/carousel.css" rel="stylesheet">
   </head>
   <body>
@@ -72,6 +69,7 @@ if(!isset($_SESSION['username']))
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">To Do</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <a class="dropdown-item" href="games.php">Games</a>
+          <a class="dropdown-item" href="article.php">Articles</a>
           <a class="dropdown-item" href="vc.php">Video calls</a>
           <a class="dropdown-item" href="exercise.php">Exercise</a>
           <a class="dropdown-item" href="courses.php">Courses</a>
@@ -88,7 +86,7 @@ if(!isset($_SESSION['username']))
           <a class="dropdown-item" href="notes.php">Notes</a>
           <a class="dropdown-item" href="recording.php">Recorded Lectures</a>
           <a class="dropdown-item" href="timetable.php">Lecture schedule</a>
-          <a class="dropdown-item" href="about.php">e-Library</a>
+         
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -105,25 +103,25 @@ if(!isset($_SESSION['username']))
       </li>
     </ul>
     <form class="form-inline my-2 my-md-0">
+      <ul class="navbar-nav">
        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello <?php echo $_SESSION['username']; ?> </a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #45b6fe">Hello <?php echo $_SESSION['username']; ?> </a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
-          <a class="dropdown-item" href="#">View account</a>
+          <a class="dropdown-item" href="info.php">View account</a>
           <a class="dropdown-item" href="../logout.php">Logout</a>
           
         </div>
       </li>
+    </ul>
     </form>
   </div>
 </nav><center>
-<!-- <iframe src="http://bit.ly/scet_sem5" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="754px" width="1520px" allowfullscreen></iframe> -->
+
 
 
 <h2 class="h1 mb-2 font-weight-normal">Web Technology: </h2>
 <iframe src="https://drive.google.com/file/d/16WnR35n0RCykn_AWQRFeDQtvIwpvVXVq/preview" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="754px" width="1520px" allowfullscreen></iframe>
-<!-- 
-<h2 class="h1 mb-2 font-weight-normal">Web Technology: </h2>
-<iframe src="https://drive.google.com/file/d/16WnR35n0RCykn_AWQRFeDQtvIwpvVXVq/preview" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="754px" width="1520px" allowfullscreen></iframe> -->
+
 
  </center>
 <footer class="footer" style="background-color: #878c94; color: white">

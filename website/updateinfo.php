@@ -30,14 +30,12 @@ if(!isset($_SESSION['username']))
  ?>
 
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Quarantine & Fun</title>
+
+    <title>Update Info</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
@@ -45,7 +43,6 @@ if(!isset($_SESSION['username']))
 
 
 
-    <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -64,7 +61,6 @@ if(!isset($_SESSION['username']))
         }
       }
     </style>
-    <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
   </head>
   <body>
@@ -119,7 +115,7 @@ if(!isset($_SESSION['username']))
         <a class="nav-link" href="about.php">About Us <span class="sr-only">(current)</span></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-md-0">
+    <form class="form-inline my-2 my-md-0" >
       <ul class="navbar-nav">
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffaf7a">Hello <?php echo $_SESSION['username']; ?> </a>
@@ -164,7 +160,7 @@ if(!isset($_SESSION['username']))
     </div>
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Update data</h4>
-      <form class="needs-validation" method="POST" action="">
+      <form class="needs-validation" method="POST" action="" onsubmit="return validation()">
 
           <?php 
 
@@ -196,14 +192,14 @@ $updatequery = " update user set fname='$name', username='$username', email='$em
 
   ?>
   <script>alert('Updated successfully');
-  location.replace("members.php");
+  location.replace("info.php");
 </script>
   <?php 
 
 }else{
   ?>
   <script>alert('Updation unsuccessful');
-location.replace("members.php");
+location.replace("info.php");
 </script>
   <?php
 }
@@ -235,6 +231,7 @@ location.replace("members.php");
               <span class="input-group-text">@</span>
             </div>
             <input type="text" class="form-control" id="username" name="username" value="<?php echo $result['username']; ?>">
+            <span id="nameerror" class="text-danger font-weight-bold"> </span>
             
           </div>
         </div>
@@ -242,12 +239,14 @@ location.replace("members.php");
         <div class="mb-3">
           <label for="email">Email </label>
           <input type="email" class="form-control" id="email" name="email" value="<?php echo $result['email']; ?>">
+          <span id="emailerror" class="text-danger font-weight-bold"> </span>
           
         </div>
 
         <div class="mb-3">
           <label for="address">Mobile number</label>
           <input type="text" class="form-control" name="mobile" value="<?php echo $result['mobile']; ?>">
+          <span id="mobileerror" class="text-danger font-weight-bold"> </span>
           
         </div>
 
@@ -265,7 +264,7 @@ location.replace("members.php");
             
           </div>
           <div class="col-md-6 mb-3">
-            <label for="cc-number">Branch:<span class="text-muted">(IT/COMP/CIVI/MECH)</span></label>
+            <label for="cc-number">Branch:<span class="text-muted">(IT/COMP/CIVIL/MECH)</span></label>
             <input type="text" class="form-control" id="cc-number" name="branch" placeholder=""  value="<?php echo $result['branch']; ?>">
             
           </div>
@@ -322,6 +321,68 @@ location.replace("members.php");
         <span  style="color: white">Contact Us on <a href="mailto: funqandf@gmail.com" style="color: white">mail@ </a>funqandf@gmail.com</span>
       </div>
     </footer>
+
+
+    <script type="text/javascript">
+
+  function validation()
+  {
+     var fname = document.getElementById('name').value;
+     var username = document.getElementById('username').value;
+     var mobile = document.getElementById('mobile').value;
+     var email = document.getElementById('email').value;
+
+
+
+     var namecheck = /^[A-Z]{1}[a-z]{3,30}$/ ;
+     var usercheck = /^[A-za-z0-9_-]{3,10}$/ ;
+     var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,16}$/ ;
+     var emailcheck = /^[A-Za-z0-9_.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/ ;
+     var mobilecheck = /^[789]{1}[0-9]{9}$/ ;
+
+     
+     if(namecheck.test(fname)){
+      document.getElementById('nameerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('nameerror').innerHTML = "* First name is not valid  ";
+      return false;
+     }
+
+
+     if(emailcheck.test(email)){
+      document.getElementById('emailerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('emailerror').innerHTML = "* Email-id is not valid  ";
+      return false;
+     }
+
+      if(mobilecheck.test(mobile)){
+      document.getElementById('mobileerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('mobileerror').innerHTML = "* mobile number is not valid  ";
+      return false;
+     }
+
+      if(usercheck.test(username)){
+      document.getElementById('usernameerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('usernameerror').innerHTML = "* username is not valid  ";
+      return false;
+     }
+
+
+
+
+  }
+
+
+
+</script>
+  
  
 
 

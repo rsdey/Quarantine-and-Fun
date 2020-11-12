@@ -16,14 +16,10 @@ if(!isset($_SESSION['username']))
 
  ?>
 
-<!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
     <title>Quarantine & Fun</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
@@ -33,12 +29,12 @@ if(!isset($_SESSION['username']))
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
+
   <link href="../blog/css/clean-blog.min.css" rel="stylesheet">
 
 
 
-    <!-- Bootstrap core CSS -->
+  
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="templates/album/album.css" rel="stylesheet">
 
@@ -81,6 +77,7 @@ if(!isset($_SESSION['username']))
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">To Do</a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
           <a class="dropdown-item" href="games.php">Games</a>
+          <a class="dropdown-item" href="article.php">Articles</a>
           <a class="dropdown-item" href="vc.php">Video calls</a>
           <a class="dropdown-item" href="exercise.php">Exercise</a>
           <a class="dropdown-item" href="courses.php">Courses</a>
@@ -119,7 +116,7 @@ if(!isset($_SESSION['username']))
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #45b6fe">Hello <?php echo $_SESSION['username']; ?> </a>
         <div class="dropdown-menu" aria-labelledby="dropdown04">
-          <a class="dropdown-item" href="#">View account</a>
+          <a class="dropdown-item" href="info.php">View account</a>
           <a class="dropdown-item" href="../logout.php">Logout</a>
           
         </div>

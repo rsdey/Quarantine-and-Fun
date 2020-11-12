@@ -31,6 +31,83 @@
 
 </head>
 <body style="background-color: #999999;">
+	<script type="text/javascript">
+
+  function validation()
+  {
+  	 var fname = document.getElementById('name').value;
+     var username = document.getElementById('username').value;
+     var mobile = document.getElementById('mobile').value;
+     var email = document.getElementById('email').value;
+     var password = document.getElementById('pass').value;
+     var cpassword = document.getElementById('rp_pass').value;
+
+
+     var namecheck = /^[A-Z]{1}[a-z]{3,30}$/ ;
+     var usercheck = /^[A-za-z0-9_-]{3,10}$/ ;
+     var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,16}$/ ;
+     var emailcheck = /^[A-Za-z0-9_.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/ ;
+     var mobilecheck = /^[789]{1}[0-9]{9}$/ ;
+
+     
+     if(namecheck.test(fname)){
+      document.getElementById('nameerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('nameerror').innerHTML = "* First name is not valid  ";
+      return false;
+     }
+
+
+     if(emailcheck.test(email)){
+      document.getElementById('emailerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('emailerror').innerHTML = "* Email-id is not valid  ";
+      return false;
+     }
+
+      if(mobilecheck.test(mobile)){
+      document.getElementById('mobileerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('mobileerror').innerHTML = "* mobile number is not valid  ";
+      return false;
+     }
+
+      if(usercheck.test(username)){
+      document.getElementById('usernameerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('usernameerror').innerHTML = "* username is not valid  ";
+      return false;
+     }
+
+
+     if(passwordcheck.test(password)){
+      document.getElementById('passerror').innerHTML = " ";
+     }
+     else{
+      document.getElementById('passerror').innerHTML = "* password must include atleast one number, letter and a special character  ";
+      return false;
+     }
+
+     if(password === cpassword)
+     {
+      document.getElementById('rp_passerror').innerHTML = "";
+     }
+     else{
+      document.getElementById('rp_passerror').innerHTML = "* password is not matching  ";
+      return false;
+     }
+
+
+  }
+
+
+
+</script>
+	
 
 
 	
@@ -114,82 +191,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-
-  function validation()
-  {
-  	 var fname = document.getElementById('name').value;
-     var username = document.getElementById('username').value;
-     var mobile = document.getElementById('mobile').value;
-     var email = document.getElementById('email').value;
-     var password = document.getElementById('pass').value;
-     var cpassword = document.getElementById('rp_pass').value;
-
-
-     var namecheck = /^[A-Z]{1}[a-z]{3,30}$/ ;
-     var usercheck = /^[A-za-z0-9_-]{3,10}$/ ;
-     var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,16}$/ ;
-     var emailcheck = /^[A-Za-z0-9_.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/ ;
-     var mobilecheck = /^[789]{1}[0-9]{9}$/ ;
-
-     
-     if(namecheck.test(fname)){
-      document.getElementById('nameerror').innerHTML = " ";
-     }
-     else{
-      document.getElementById('nameerror').innerHTML = "* First name is not valid  ";
-      return false;
-     }
-
-
-     if(emailcheck.test(email)){
-      document.getElementById('emailerror').innerHTML = " ";
-     }
-     else{
-      document.getElementById('emailerror').innerHTML = "* Email-id is not valid  ";
-      return false;
-     }
-
-      if(mobilecheck.test(mobile)){
-      document.getElementById('mobileerror').innerHTML = " ";
-     }
-     else{
-      document.getElementById('mobileerror').innerHTML = "* mobile number is not valid  ";
-      return false;
-     }
-
-      if(usercheck.test(username)){
-      document.getElementById('usernameerror').innerHTML = " ";
-     }
-     else{
-      document.getElementById('usernameerror').innerHTML = "* username is not valid  ";
-      return false;
-     }
-
-
-     if(passwordcheck.test(password)){
-      document.getElementById('passerror').innerHTML = " ";
-     }
-     else{
-      document.getElementById('passerror').innerHTML = "* password must include atleast one number, letter and a special character  ";
-      return false;
-     }
-
-     if(password === cpassword)
-     {
-      document.getElementById('rp_passerror').innerHTML = "";
-     }
-     else{
-      document.getElementById('rp_passerror').innerHTML = "* password is not matching  ";
-      return false;
-     }
-
-
-  }
-
-
-
-</script>
 	
 
 
@@ -224,7 +225,7 @@ if(isset($_POST['submit'])){
 
 
 
-	if($emailcount>0 or usercount>0){
+	if($emailcount>0 or $usercount>0){
 
 
  	?>
@@ -243,7 +244,7 @@ if(isset($_POST['submit'])){
 	$inquery = mysqli_query($con, $infoquery);
 
 
-		if($iquery and $inquery){
+		if($iquery){
 	
 
  	?>
